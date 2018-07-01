@@ -1,5 +1,7 @@
 package main
 
+// Integrate firebase, REST api boilerplate
+
 import (
 	"html/template"
 	"log"

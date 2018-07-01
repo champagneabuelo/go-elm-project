@@ -1,8 +1,26 @@
-module App exposing (..)
+module Main exposing (..)
 
-import Html exposing (text)
+import Html exposing (Html, div, text, program)
+import Msgs exposing (Msg)
+import Models exposing (Model)
+import Update exposing (update)
+import View exposing (view)
 
+init : ( Model, Cmd Msg )
+init = 
+    ( "Hey there, folks", Cmd.none )
 
-main : Html.Html msg
+-- SUBSCRIPTIONS
+subscriptions : Model -> Sub Msg
+subscriptions model =
+    Sub.none
+
+-- MAIN
+main : Program Never Model Msg
 main =
-    text "Hello"
+    program
+        { init = init
+        , view = view
+        , update = update
+        , subscriptions = subscriptions
+        }
