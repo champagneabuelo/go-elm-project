@@ -1,6 +1,6 @@
-# go-elm
+# Go-Elm Project
 
-Bootstrap app to get started quickly with Go + Elm application.
+Project that will use Elm at the frontend, with Go as the backend serving data via Firebase. 
 
 ## Requirements
 
@@ -17,11 +17,11 @@ elm-package install
 Then, you can build your application and the Go server that is going to serve your Elm content.
 
 ```
-elm-make ./elm-src/App.elm --output static/js/app.js
+yarn client
 go build server/server.go
 ```
 
-### Running the server
+### Running the Go server
 
 ```
 ./server
