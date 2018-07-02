@@ -1,19 +1,16 @@
 module Main exposing (..)
 
-import Html exposing (Html, div, text, program)
-import Msgs exposing (Msg)
+import Commands exposing (fetchPlayers)
+import Html exposing (program)
 import Models exposing (Model, initialModel)
+import Msgs exposing (Msg)
 import Update exposing (update)
 import View exposing (view)
 
 
 init : ( Model, Cmd Msg )
 init =
-    ( initialModel, Cmd.none )
-
-
-
--- SUBSCRIPTIONS
+    ( initialModel, fetchPlayers )
 
 
 subscriptions : Model -> Sub Msg
